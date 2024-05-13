@@ -684,6 +684,9 @@ body {
 .homepage {
   border: 1px solid lightcoral;
   border-radius: 10px;
+  width: 820px;
+  height: 397px;
+  object-fit: cover;
 }
 
 .tags {
