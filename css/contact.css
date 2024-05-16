@@ -1,0 +1,131 @@
+.fa-solid.fa-sun,
+.fa-solid.fa-bars {
+  color: lightcoral;
+}
+
+.center {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-top: 150px;
+}
+
+.center h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  font-size: 8rem;
+  z-index: 9998;
+}
+
+.center p {
+  font-family: 'Ubuntu Sans Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
+  z-index: 9998;
+}
+
+.form__contactMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+form {
+  padding-top: 50px;
+  width: 40%;
+}
+
+form input,
+label {
+  font-size: 20px;
+  font-family: 'Ubuntu Sans Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  color: white;
+}
+
+input[type='text'],
+input[type='email'],
+textarea {
+  padding: 15px;
+  border: 1px solid #444;
+  background-color: #444;
+  color: #999;
+  border-radius: 5px;
+  margin-top: 10px;
+  width: 100%;
+  resize: vertical;
+}
+
+input[type='text']:focus,
+input[type='email']:focus,
+textarea:focus {
+  border-color: lightcoral;
+  outline: none;
+}
+
+input[type='submit'] {
+  padding: 15px 20px;
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  border-radius: 15px;
+  cursor: pointer;
+  width: 150px;
+  text-align: center;
+  transform-origin: top;
+}
+
+input[type='submit']:hover {
+  animation: submit__hover 500ms ease-in-out forwards;
+  transform-origin: top;
+}
+
+input[type='submit']:not(:hover) {
+  animation: submit__unhover 500ms ease-in-out forwards;
+  transform-origin: top;
+}
+
+@keyframes submit__hover {
+  0% {
+    background-color: lightcoral;
+    transform: scale(1);
+  }
+  100% {
+    background-color: #93020c;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes submit__unhover {
+  0% {
+    background-color: #93020c;
+    transform: scale(1.2);
+  }
+  100% {
+    background-color: lightcoral;
+    transform: scale(1);
+  }
+}
+
+.form-row + .form-row {
+  border-top: 2px solid lightcoral;
+  padding-top: 20px;
+}

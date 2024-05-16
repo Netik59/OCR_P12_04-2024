@@ -1,0 +1,16 @@
+/* Styles de la scrollbar */
+::-webkit-scrollbar {
+  width: 8px; /* Largeur plus fine de la scrollbar */
+}
+
+/* Style de la poignée de la scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: lightcoral; /* Couleur de la poignée */
+  border-radius: 5px; /* Bord arrondi */
+  height: 0; /* Hauteur initiale de la poignée */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #93020c; /* Nouvelle couleur de la poignée au survol */
+  height: 14%; /* Hauteur maximale de la poignée au survol */
+}

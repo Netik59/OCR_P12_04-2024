@@ -1,0 +1,283 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 107%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.start {
+  background-image: url('https://assets-global.website-files.com/64da3cdd1d11a292e297fca8/662a9cc4e8554a6fb7e4855e_Energy%20wave%20-MOD-p-2000.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.center {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.center h1 {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  font-size: 8rem;
+  z-index: 9998;
+}
+
+.center p {
+  font-family: 'Ubuntu Sans Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2rem;
+  z-index: 9998;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 100px;
+}
+
+.project {
+  position: relative;
+  width: 100%;
+  max-width: 55rem;
+  color: black;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  margin: 100px 0;
+  box-sizing: border-box;
+  padding-top: 50px;
+  filter: brightness(1);
+  text-align: justify;
+  min-height: 797px;
+}
+
+@keyframes brightness__hover {
+  0% {
+    filter: brightness(1);
+  }
+  100% {
+    filter: brightness(0.5);
+  }
+}
+
+@keyframes brightness__unhover {
+  0% {
+    filter: brightness(0.5);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+
+.project:hover {
+  animation: brightness__hover 400ms ease-in-out forwards;
+}
+
+.project:not(:hover) {
+  animation: brightness__unhover 400ms ease-in-out forwards;
+}
+
+@keyframes view__hover {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes view__unhover {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+.project:hover .view {
+  animation: view__hover 400ms ease-in-out forwards;
+}
+
+.project:not(:hover) .view {
+  animation: view__unhover 400ms ease-in-out forwards;
+}
+
+.view {
+  position: absolute;
+  top: 42%;
+  left: 44%;
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #93020c;
+  padding: 30px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.projet__link {
+  color: black;
+}
+
+.right-project {
+  align-self: flex-end;
+}
+
+.project h2 {
+  padding-top: 30px;
+  padding-bottom: 10px;
+}
+
+.description {
+  font-family: 'Ubuntu Sans Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.1rem;
+  padding-bottom: 30px;
+  margin-left: 10px;
+}
+
+.homepage {
+  border: 1px solid lightcoral;
+  border-radius: 10px;
+  width: 820px;
+  height: 397px;
+  object-fit: cover;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-left: 10px;
+}
+
+.tag {
+  font-family: 'Anton', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  letter-spacing: 0.03em;
+  font-size: 1rem;
+  border: 1px solid lightcoral;
+  border-radius: 7px;
+  padding: 5px;
+}
+
+.project:hover .view_project p,
+.project:hover .view_project .fa-solid.fa-chevron-right {
+  animation: view__unhover 400ms ease-in-out forwards;
+}
+
+.project:not(:hover) .view_project p,
+.project:not(:hover) .view_project .fa-solid.fa-chevron-right {
+  animation: view__hover 400ms ease-in-out forwards;
+}
+
+.view_project {
+  padding-top: 30px;
+  padding-bottom: 20px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.view_project p {
+  font-family: 'Ubuntu Sans Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.2rem;
+  opacity: 1;
+}
+
+.fa-solid.fa-chevron-right {
+  color: lightcoral;
+  opacity: 1;
+}
+
+.aboutMe {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.aboutMe__title {
+  color: white;
+  font-size: 3.5rem;
+  padding-bottom: 30px;
+}
+
+.aboutMe__div {
+  border: 2px solid lightcoral;
+  border-radius: 8px;
+  width: 50%;
+  padding: 60px;
+}
+
+.aboutMe__text {
+  font-family: 'Ubuntu Sans Mono', monospace;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 1.4rem;
+  color: white;
+  text-align: justify;
+}
+
+.aboutMe__slider {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.chevron {
+  width: 70px;
+  height: 70px;
+  transition: transform 0.3s ease;
+}
+
+.chevron:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.chevron__right {
+  position: absolute;
+  right: 80px;
+  top: 40%;
+}
+
+.chevron__left {
+  position: absolute;
+  left: 80px;
+  top: 40%;
+}
