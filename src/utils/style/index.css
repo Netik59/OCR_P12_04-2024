@@ -1,3 +1,19 @@
+:root {
+  --main-color: #ffffff;
+  --text-color: #000000;
+  --details-color: #f08080;
+  --project-color-bg: #ffffff;
+  --project-color-txt: #000000;
+}
+
+[data-theme='dark'] {
+  --main-color: #ffffff;
+  --text-color: #000000;
+  --details-color: #f08080;
+  --project-color-bg: #000000;
+  --project-color-txt: #b0c4de;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -20,7 +36,7 @@
 }
 
 .center {
-  color: white;
+  color: var(--main-color);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -56,8 +72,8 @@
   position: relative;
   width: 100%;
   max-width: 55rem;
-  color: black;
-  background-color: white;
+  color: var(--project-color-txt);
+  background-color: var(--project-color-bg);
   padding: 30px;
   border-radius: 10px;
   margin: 100px 0;
@@ -65,6 +81,7 @@
   padding-top: 50px;
   text-align: justify;
   min-height: 797px;
+  box-shadow: 0 0 170px 0 rgba(255, 255, 255, 0.35);
 }
 
 .project:hover .project__backdrop {
@@ -73,7 +90,7 @@
 
 .project__backdrop {
   position: absolute;
-  background-color: black;
+  background-color: var(--text-color);
   opacity: 0;
   transition-duration: 0.3s;
   inset: 0;
@@ -126,7 +143,7 @@
   font-style: normal;
   letter-spacing: 0.01em;
   font-size: 1.5rem;
-  color: white;
+  color: var(--main-color);
   background-color: #93020c;
   padding: 30px;
   border-radius: 50%;
@@ -153,7 +170,7 @@
 }
 
 .homepage {
-  border: 1px solid lightcoral;
+  border: 1px solid var(--details-color);
   border-radius: 10px;
   width: 820px;
   height: 397px;
@@ -173,18 +190,18 @@
   font-style: normal;
   letter-spacing: 0.03em;
   font-size: 1rem;
-  border: 1px solid lightcoral;
+  border: 1px solid var(--details-color);
   border-radius: 7px;
   padding: 5px;
 }
 
 .project:hover .view_project p,
-.project:hover .view_project .fa-solid.fa-chevron-right {
+.project:hover .view_project .chevron-right {
   animation: view__unhover 400ms ease-in-out forwards;
 }
 
 .project:not(:hover) .view_project p,
-.project:not(:hover) .view_project .fa-solid.fa-chevron-right {
+.project:not(:hover) .view_project .chevron-right {
   animation: view__hover 400ms ease-in-out forwards;
 }
 
@@ -207,8 +224,8 @@
   opacity: 1;
 }
 
-.fa-solid.fa-chevron-right {
-  color: lightcoral;
+.chevron-right {
+  color: var(--details-color);
   opacity: 1;
 }
 
@@ -219,13 +236,13 @@
 }
 
 .aboutMe__title {
-  color: white;
+  color: var(--main-color);
   font-size: 3.5rem;
   padding-bottom: 30px;
 }
 
 .aboutMe__div {
-  border: 2px solid lightcoral;
+  border: 2px solid var(--details-color);
   border-radius: 8px;
   width: 50%;
   padding: 60px;
@@ -237,7 +254,7 @@
   font-weight: 200;
   font-style: normal;
   font-size: 1.4rem;
-  color: white;
+  color: var(--main-color);
   text-align: justify;
 }
 
@@ -271,11 +288,27 @@
   top: 40%;
 }
 
-.test {
+.effects {
+  top: 0;
+  left: 0;
   width: 700px;
   height: 200px;
   border-radius: 50px;
+}
+
+.effect1 {
+  background: linear-gradient(
+    45deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 154, 0, 1) 50%,
+    rgba(208, 222, 33, 1) 100%
+  );
+  filter: blur(350px);
   transform: rotate(35deg);
+  animation: moveEffectDown 10s infinite linear;
+}
+
+.effect2 {
   background: linear-gradient(
     90deg,
     rgba(176, 1, 1, 1) 0%,
@@ -283,4 +316,188 @@
     rgba(0, 212, 255, 1) 100%
   );
   filter: blur(200px);
+  transform: rotate(90deg);
+  animation: moveEffectUp 10s infinite linear;
 }
+
+.effect2.reverse {
+  animation: moveEffectUp-reverse 10s infinite linear;
+}
+
+.effect3 {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 191, 255, 1) 0%,
+    rgba(0, 255, 127, 1) 50%,
+    rgba(255, 69, 0, 1) 100%
+  );
+  filter: blur(230px);
+  transform: rotate(73deg);
+  animation: pulseEffect 2s infinite ease-in-out;
+}
+
+.effect4 {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 0, 0, 1) 0%,
+    rgba(255, 165, 0, 1) 33%,
+    rgba(255, 255, 0, 1) 66%,
+    rgba(0, 128, 0, 1) 100%
+  );
+  filter: blur(350px);
+  transform: rotate(142deg);
+  animation: rotateEffect 4s infinite linear;
+}
+
+.effect5 {
+  background: linear-gradient(
+    45deg,
+    rgba(0, 0, 255, 1) 0%,
+    rgba(75, 0, 130, 1) 50%,
+    rgba(238, 130, 238, 1) 100%
+  );
+  filter: blur(200px);
+  transform: rotate(213deg);
+}
+
+.effect6 {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 20, 147, 1) 0%,
+    rgba(0, 191, 255, 1) 50%,
+    rgba(50, 205, 50, 1) 100%
+  );
+  filter: blur(250px);
+  transform: rotate(97deg);
+  animation: blinkEffect 5s infinite linear;
+}
+
+.effect7 {
+  background: linear-gradient(
+    70deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(105, 105, 105, 1) 50%,
+    rgba(169, 169, 169, 1) 100%
+  );
+  filter: blur(190px);
+  transform: rotate(164deg);
+}
+
+.effect8 {
+  background: linear-gradient(
+    90deg,
+    rgba(0, 128, 128, 1) 0%,
+    rgba(32, 178, 170, 1) 50%,
+    rgba(0, 255, 127, 1) 100%
+  );
+  filter: blur(250px);
+  transform: rotate(58deg);
+  animation: diagonalMovement 4s infinite ease-in-out;
+}
+
+@keyframes moveEffectDown {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50vw);
+  }
+}
+
+@keyframes moveEffectUp {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vw);
+  }
+}
+
+@keyframes moveEffectUp-reverse {
+  0% {
+    transform: translateY(-100vw);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotateEffect {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blinkEffect {
+  0%,
+  50%,
+  100% {
+    opacity: 1;
+  }
+  25%,
+  75% {
+    opacity: 0;
+  }
+}
+
+@keyframes diagonalMovement {
+  0%,
+  100% {
+    transform: scale(1) translate(0, 0);
+  }
+  25% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  50% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+  75% {
+    transform: scale(1) translate(-50%, -50%);
+  }
+}
+
+/* .perspective.modalview {
+  position: fixed;
+  -webkit-perspective: 1500px;
+  perspective: 1500px;
+}
+.effect-rotatetop {
+  background: #edcdbb;
+}
+.perspective {
+  background: #aaa;
+  position: relative;
+} 
+
+.effect-rotatetop .container {
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform-origin: 50% 50%;
+  transform-origin: 50% 50%;
+}
+.container {
+  background: #fff;
+  min-height: 100%;
+  position: relative;
+  outline: 1px solid rgba(0, 0, 0, 0);
+  z-index: 10;
+  -webkit-transform: translateZ(0) translateX(0) rotateY(0deg);
+  transform: translateZ(0) translateX(0) rotateY(0deg);
+}
+
+*/
