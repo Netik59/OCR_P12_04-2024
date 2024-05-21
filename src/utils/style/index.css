@@ -245,7 +245,9 @@
   border: 2px solid var(--details-color);
   border-radius: 8px;
   width: 50%;
+  overflow: hidden;
   padding: 60px;
+  min-height: 313px;
 }
 
 .aboutMe__text {
@@ -263,6 +265,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.bullets {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.bullets li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #555;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.bullets li.active {
+  background-color: #ccc;
 }
 
 .chevron {

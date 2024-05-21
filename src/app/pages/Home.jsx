@@ -1,17 +1,13 @@
+import { AboutMe } from '../../common/components/AboutMe'
 import { ProjectCard } from '../../common/components/ProjectCard'
+import { Start } from '../../common/components/Start'
 import projects from '../../data/projects.json'
 import '../../utils/style/index.css'
 
 export const Home = () => {
   return (
     <>
-      <section className="start">
-        <div className="overlay"></div>
-        <div className="center">
-          <h1>MY WORKS</h1>
-          <p>Transforming Concepts Into Memorable Creations</p>
-        </div>
-      </section>
+      <Start />
       <section className="projects-container">
         {projects.map((project, index) => (
           <ProjectCard
@@ -25,6 +21,7 @@ export const Home = () => {
           />
         ))}
       </section>
+      <AboutMe />
     </>
   )
 }
