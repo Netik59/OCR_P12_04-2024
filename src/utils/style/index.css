@@ -242,12 +242,19 @@
 }
 
 .aboutMe__div {
+  position: relative;
   border: 2px solid var(--details-color);
   border-radius: 8px;
   width: 50%;
   overflow: hidden;
   padding: 60px;
   min-height: 313px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center; /* Center text horizontally */
+  box-sizing: border-box; /* Include padding in the total box size */
+  transition: all 0.5s ease-in-out;
 }
 
 .aboutMe__text {
@@ -260,11 +267,50 @@
   text-align: justify;
 }
 
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-50%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.aboutMe__div.next.entering {
+  animation: slideInFromRight 0.5s forwards;
+}
+
+.aboutMe__div.prev.entering {
+  animation: slideInFromLeft 0.5s forwards;
+}
+
+.aboutMe__div.next {
+  animation: slideInFromRight 0.5s forwards;
+}
+
+.aboutMe__div.prev {
+  animation: slideInFromLeft 0.5s forwards;
+}
+
 .aboutMe__slider {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .bullets {

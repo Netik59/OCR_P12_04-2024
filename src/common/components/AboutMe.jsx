@@ -3,13 +3,28 @@ import slides from '../../data/slides.json'
 
 export const AboutMe = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [animationClass, setAnimationClass] = useState('')
 
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)
+    setAnimationClass('next entering')
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev + 1) % slides.length)
+      setAnimationClass('next')
+      setTimeout(() => {
+        setAnimationClass('')
+      }, 500)
+    }, 0)
   }
 
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+    setAnimationClass('prev entering')
+    setTimeout(() => {
+      setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)
+      setAnimationClass('prev')
+      setTimeout(() => {
+        setAnimationClass('')
+      }, 500)
+    }, 0)
   }
 
   return (
@@ -28,7 +43,7 @@ export const AboutMe = () => {
           alt="Chevron vers la gauche"
           onClick={prevSlide}
         />
-        <div className={`aboutMe__div`}>
+        <div className={`aboutMe__div ${animationClass}`}>
           <ul className="bullets">
             {slides.map((slide, index) => (
               <li
