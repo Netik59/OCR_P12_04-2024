@@ -6,8 +6,11 @@ import '../../utils/style/index.css'
 
 export const Home = () => {
   return (
-    <>
-      <Start />
+    <main>
+      <Start
+        title="MY WORKS"
+        description="Transforming Concepts Into Memorable Creations"
+      />
       <section className="projects-container">
         {projects.map((project, index) => (
           <ProjectCard
@@ -22,6 +25,6 @@ export const Home = () => {
         ))}
       </section>
       <AboutMe />
-    </>
+    </main>
   )
 }
