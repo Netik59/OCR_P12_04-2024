@@ -9,11 +9,23 @@ function App() {
   return (
     <React.StrictMode>
       <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          {/* <Route path="*" element={<Error />} /> */}
-        </Routes>
+        <div class="main-container perspective effect-rotatetop">
+          <div class="container">
+            <div class="wrapper">
+              <Header />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                {/* <Route path="*" element={<Error />} /> */}
+              </Routes>
+            </div>
+          </div>
+        </div>
+        <nav class="outer-nav bottom horizontal">
+          <a href="#" class="icon-home">Home</a>
+          <a href="#" class="icon-project">Project</a>
+          <a href="#" class="icon-aboutMe">About Me</a>
+          <a href="pages/contact.html" class="icon-contactMe">Contact me</a>
+        </nav>
       </Router>
     </React.StrictMode>
   );
