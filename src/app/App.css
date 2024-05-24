@@ -306,7 +306,7 @@ h2 {
 
 /* Effect Rotate Top */
 .effect-rotatetop {
-  background: #edcdbb;
+  background: black;
 }
 
 .effect-rotatetop .container {
@@ -317,7 +317,8 @@ h2 {
 }
 
 .effect-rotatetop .container::after {
-  background: rgba(94, 59, 43, 0.6);
+  background: rgba(37, 35, 34, 0.6);
+  border: 3px solid #444;
 }
 
 .effect-rotatetop.animate .container {
@@ -331,7 +332,7 @@ h2 {
 
 .effect-rotatetop .outer-nav a {
   opacity: 0;
-  color: #ed8151;
+  color: var(--details-color);
   -webkit-transform: translateY(200px) translateZ(-1000px);
   transform: translateY(200px) translateZ(-1000px);
   -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
@@ -339,7 +340,7 @@ h2 {
 }
 
 .effect-rotatetop .outer-nav a:hover {
-  color: #777;
+  color: #93020c;
 }
 
 .effect-rotatetop.animate .outer-nav a {
@@ -376,4 +377,17 @@ h2 {
 .effect-rotatetop.animate .outer-nav a:nth-child(7) {
   -webkit-transition-delay: 0.24s;
   transition-delay: 0.24s;
+}
+
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }

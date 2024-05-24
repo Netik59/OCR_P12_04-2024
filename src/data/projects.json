@@ -3,7 +3,7 @@
     "title": "ArgentBank",
     "description": "This project consists of creating a responsive web application with React and Redux Toolkit to manage user authentication and transaction management. In Phase 2, I help design Swagger compliant API routes for transaction manipulation, while maintaining an environmentally friendly code and good development practices.",
     "tags": ["React", "Redux Toolkit", "CSS"],
-    "imageSrc": "https://raw.githubusercontent.com/Netik59/OCR_P12_04-2024/main/src/images/P11/homepage.webp",
+    "imageSrc": "/images/P11/homepage.webp",
     "effectNumber": "effect1"
   },
   {

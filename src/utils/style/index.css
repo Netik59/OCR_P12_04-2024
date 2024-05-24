@@ -85,7 +85,7 @@
 }
 
 .project:hover .project__backdrop {
-  opacity: 0.7;
+  opacity: 0.5;
 }
 
 .project__backdrop {
@@ -366,6 +366,7 @@
   width: 700px;
   height: 200px;
   border-radius: 50px;
+  z-index: -1;
 }
 
 .effect1 {
@@ -377,7 +378,7 @@
   );
   filter: blur(350px);
   transform: rotate(35deg);
-  animation: moveEffectDown 10s infinite linear;
+  animation: moveEffectDown 10s infinite alternate linear;
 }
 
 .effect2 {
@@ -389,11 +390,7 @@
   );
   filter: blur(200px);
   transform: rotate(90deg);
-  animation: moveEffectUp 10s infinite linear;
-}
-
-.effect2.reverse {
-  animation: moveEffectUp-reverse 10s infinite linear;
+  animation: moveEffectUp 10s infinite alternate linear;
 }
 
 .effect3 {
@@ -405,7 +402,7 @@
   );
   filter: blur(230px);
   transform: rotate(73deg);
-  animation: pulseEffect 2s infinite ease-in-out;
+  animation: pulseEffect 2s infinite alternate ease-in-out;
 }
 
 .effect4 {
@@ -418,7 +415,7 @@
   );
   filter: blur(350px);
   transform: rotate(142deg);
-  animation: rotateEffect 4s infinite linear;
+  animation: rotateEffect 4s infinite alternate linear;
 }
 
 .effect5 {
@@ -441,7 +438,7 @@
   );
   filter: blur(250px);
   transform: rotate(97deg);
-  animation: blinkEffect 5s infinite linear;
+  animation: blinkEffect 5s infinite alternate linear;
 }
 
 .effect7 {
@@ -464,7 +461,7 @@
   );
   filter: blur(250px);
   transform: rotate(58deg);
-  animation: diagonalMovement 4s infinite ease-in-out;
+  animation: diagonalMovement 4s infinite alternate ease-in-out;
 }
 
 @keyframes moveEffectDown {
