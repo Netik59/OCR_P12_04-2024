@@ -20,7 +20,7 @@ const AnimatedText = ({ text }) => {
 
 export const Start = ({ title, description }) => {
   return (
-    <section className="start">
+    <section className="start" id="home">
       <div className="overlay"></div>
       <div className="center">
         <h1>

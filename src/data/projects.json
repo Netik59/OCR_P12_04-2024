@@ -10,7 +10,7 @@
     "title": "Event agency",
     "description": "This project consists in finalizing the showcase site of an event agency by correcting existing bugs, completing the recipe book to ensure the compliance of features, and performing functional tests to ensure the proper functioning of the site.",
     "tags": ["React", "JestJS", "SASS"],
-    "imageSrc": "https://raw.githubusercontent.com/Netik59/OCR_P12_04-2024/main/src/images/P10/homepage.webp",
+    "imageSrc": "/images/P10/homepage.webp",
     "className": "right-project",
     "effectNumber": "effect2 right-project"
   },
@@ -18,14 +18,14 @@
     "title": "Photographer’s site",
     "description": "In this SEO optimization project, I start by analyzing the site using an audit with Lighthouse and GTMetrix to identify areas for improvement. Then, I focus on optimizing performance by reducing site load time and working on SEO to improve its visibility on search engines. I also set up local referencing and metadata for social networks, while ensuring the accessibility of the site to all users. Finally, I write a detailed report describing the actions taken and their impact, thus ensuring an overall improvement in the SEO of the site.",
     "tags": ["HTML/CSS", "JavaScript", "Lighthouse"],
-    "imageSrc": "https://raw.githubusercontent.com/Netik59/OCR_P12_04-2024/main/src/images/P9/homepage.webp",
+    "imageSrc": "/images/P9/homepage.webp",
     "effectNumber": "effect3"
   },
   {
     "title": "Real estate website",
     "description": "For this project to redesign the apartment rental site, I am in charge of developing the application in React by following the Figma models. With a pending back-end, I need to use a JSON file containing the last 20 ads to build components and routes with React Router.",
     "tags": ["React", "CSS"],
-    "imageSrc": "https://raw.githubusercontent.com/Netik59/OCR_P12_04-2024/main/src/images/P8/homepage.webp",
+    "imageSrc": "/images/P8/homepage.webp",
     "className": "right-project",
     "effectNumber": "effect4 right-project"
   },
@@ -33,14 +33,14 @@
     "title": "Plan the development of a website",
     "description": "This project was not to code but to prepare and plan the development of the website. Indeed, I established a technical monitoring system on Feedly, organized according to two axes: the specific aspects of the project and the general trends of web development. This monitoring allowed me to start listing technical tools that could facilitate the development of the site. I also identified the technical challenges of the project by grouping the needs, structuring my ideas and considering technical solutions for each aspect of development. In parallel, I set up a Kanban board on Trello to manage the project tasks, making sure to assign each task, estimate its complexity and detail its technical specifications.",
     "tags": ["Feedly", "Trello", "Daily.dev", "Wakelet"],
-    "imageSrc": "https://raw.githubusercontent.com/Netik59/OCR_P12_04-2024/main/src/images/P7/homepage.webp",
+    "imageSrc": "/images/P7/homepage.webp",
     "effectNumber": "effect5"
   },
   {
     "title": "Portfolio of an interior designer",
     "description": "This project consists in developing the portfolio site of an interior designer, by integrating both features of presentation of his work and administrative tools to manage the content of the site. The main tasks include creating the architect’s work overview page from the provided HTML, implementing the site administrator’s login page, and setting up a modal for uploading new media. These elements require seamless integration of design, effective communication with the back-end to persist data, and seamless management of user interactions.",
     "tags": ["JavaScript", "HTML/CSS"],
-    "imageSrc": "https://raw.githubusercontent.com/Netik59/OCR_P12_04-2024/main/src/images/P6/homepage.webp",
+    "imageSrc": "/images/P6/homepage.webp",
     "className": "right-project",
     "effectNumber": "effect6 right-project"
   },
@@ -48,14 +48,14 @@
     "title": "Mobile website with CSS animations",
     "description": "This project aims to develop a 'mobile first' website listing gourmet restaurant menus, allowing customers to compose their meal in advance to reduce wait times. The mission involves integrating the models provided to create a responsive version of the site, focusing first on the mobile and then extending to tablets and desktops. Animations must be carefully implemented with SASS code to add a touch of interactivity. The site must be structured in a clear and well-organized manner, with particular attention paid to the quality of the code.",
     "tags": ["HTML", "SASS", "Mobile First"],
-    "imageSrc": "https://raw.githubusercontent.com/Netik59/OCR_P12_04-2024/main/src/images/P4/homepage.webp",
+    "imageSrc": "/images/P4/homepage.webp",
     "effectNumber": "effect7"
   },
   {
     "title": "Static website",
     "description": "The project consists of developing a website allowing users to find accommodation and activities in the city of their choice. The goal is to provide a user-friendly and intuitive platform where users can search and book accommodations and activities based on their preferences and needs. The work consists mainly of integrating the site interface using HTML and CSS code, based on the model provided by the UI designer. It was necessary to make sure to respect the specifications and technical constraints of the project, ensuring that the site was functional, aesthetic and easy to use for users.",
     "tags": ["HTML/CSS"],
-    "imageSrc": "https://raw.githubusercontent.com/Netik59/OCR_P12_04-2024/main/src/images/P3/homepage.webp",
+    "imageSrc": "/images/P3/homepage.webp",
     "className": "right-project",
     "effectNumber": "effect8 right-project"
   }

@@ -11,7 +11,7 @@ export const ProjectCard = ({
 }) => {
   return (
     <>
-      <div className={`project ${className}`}>
+      <div className={`project ${className}`} data-aos="fade-up">
         <div>
           <img
             className="homepage"

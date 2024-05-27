@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import slides from '../../data/slides.json'
 
 export const AboutMe = () => {
@@ -27,8 +27,26 @@ export const AboutMe = () => {
     }, 0)
   }
 
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      const slider = document.querySelector('.aboutMe__slider')
+      const { clientX, clientY } = e
+      const { innerWidth, innerHeight } = window
+      const xOffset = (clientX / innerWidth - 0.5) * 20
+      const yOffset = (clientY / innerHeight - 0.5) * 20
+
+      slider.style.transform = `perspective(1000px) rotateY(${xOffset}deg) rotateX(${yOffset}deg)`
+    }
+
+    document.addEventListener('mousemove', handleMouseMove)
+
+    return () => {
+      document.removeEventListener('mousemove', handleMouseMove)
+    }
+  }, [])
+
   return (
-    <section className="aboutMe">
+    <section className="aboutMe" id="aboutMe">
       <h2 className="aboutMe__title">About me</h2>
       <div className="aboutMe__slider">
         <img
@@ -59,3 +77,5 @@ export const AboutMe = () => {
     </section>
   )
 }
+
+export default AboutMe

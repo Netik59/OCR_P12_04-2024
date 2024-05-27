@@ -38,6 +38,10 @@ h6 {
   font-weight: normal;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 ul {
   list-style: none;
 }
@@ -89,6 +93,7 @@ a {
 
 body {
   background-color: black;
+  overflow: auto;
 }
 
 h2 {
@@ -115,7 +120,6 @@ h2 {
   z-index: 9999;
   padding: 10px 30px;
   width: 100%;
-  position: fixed;
 }
 
 .nav {
@@ -123,14 +127,6 @@ h2 {
   flex-direction: row;
   align-items: center;
   gap: 15px;
-}
-
-.contact {
-  background-color: black;
-  color: white;
-  border: 2px solid white;
-  border-radius: 3px;
-  padding: 5px 10px;
 }
 
 .icon {
@@ -278,7 +274,6 @@ h2 {
 .outer-nav a::before {
   display: inline-block;
   font-family: 'typicons';
-  speak: none;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -346,7 +341,7 @@ h2 {
 .effect-rotatetop.animate .outer-nav a {
   opacity: 1;
   -webkit-transform: translateY(0) translateZ(0);
-  transform: translateY(0) translateZ(0);
+  transform: translateY(0%) translateZ(0);
 }
 
 .effect-rotatetop.animate .outer-nav a:nth-child(2) {
@@ -390,4 +385,78 @@ h2 {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+}
+
+.footer {
+  color: #fff;
+  padding: 50px 0;
+  background-color: #000;
+  margin-top: 300px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-section h2 {
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer-section p,
+.footer-section span,
+.footer-section a {
+  color: #fff;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.contact span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.socials a {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+.links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.links li {
+  margin-bottom: 10px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-bottom {
+  background-color: #222;
+  padding: 10px 0;
+  text-align: center;
+  color: #fff;
+}
+
+span.redirect {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }

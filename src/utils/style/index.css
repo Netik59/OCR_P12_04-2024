@@ -255,6 +255,7 @@
   text-align: center;
   box-sizing: border-box;
   transition: all 0.5s ease-in-out;
+  perspective: 1000px;
 }
 
 .aboutMe__text {
@@ -272,6 +273,10 @@
     transform: translateX(50%);
     opacity: 0;
   }
+  50% {
+    transform: translateX(-10%);
+    opacity: 1;
+  }
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -282,6 +287,10 @@
   0% {
     transform: translateX(-50%);
     opacity: 0;
+  }
+  50% {
+    transform: translateX(10%);
+    opacity: 1;
   }
   100% {
     transform: translateX(0);
@@ -310,7 +319,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 84%;
 }
 
 .bullets {
@@ -341,6 +350,8 @@
   width: 70px;
   height: 70px;
   transition: transform 0.3s ease;
+  position: absolute;
+  top: 40%;
 }
 
 .chevron:hover {
@@ -349,15 +360,11 @@
 }
 
 .chevron__right {
-  position: absolute;
   right: 80px;
-  top: 40%;
 }
 
 .chevron__left {
-  position: absolute;
   left: 80px;
-  top: 40%;
 }
 
 .effects {
