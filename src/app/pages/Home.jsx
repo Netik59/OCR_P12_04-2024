@@ -1,4 +1,5 @@
 import { AboutMe } from '../../common/components/AboutMe'
+import Footer from '../../common/components/Footer'
 import { ProjectCard } from '../../common/components/ProjectCard'
 import { Start } from '../../common/components/Start'
 import projects from '../../data/projects.json'
@@ -33,6 +34,16 @@ export const Home = () => {
         ))}
       </section>
       <AboutMe />
+      <Footer
+        a1={'Home'}
+        href1={'#home'}
+        a2={'Projects'}
+        href2={'#projects'}
+        a3={'About Me'}
+        href3={'#aboutMe'}
+        a4={'Contact'}
+        href4={'/contact'}
+      />
     </main>
   )
 }

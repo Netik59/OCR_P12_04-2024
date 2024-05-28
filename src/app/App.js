@@ -3,7 +3,6 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Header } from '../common/components/Header';
 import { Home } from './pages/Home'
 import { Contact } from './pages/Contact';
-import { Footer } from '../common/components/Footer';
 import './App.css';
 import '../utils/style/scrollbar.css';
 
@@ -88,7 +87,6 @@ function App() {
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
               </Routes>
-              <Footer />
             </div>
           </div>
           <nav className="outer-nav bottom horizontal">

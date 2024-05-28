@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAsterisk } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react'
 import emailjs from 'emailjs-com'
+import Footer from '../../common/components/Footer'
 
 export const Contact = () => {
   const [email, setEmail] = useState('')
@@ -102,11 +103,11 @@ export const Contact = () => {
         description="Let's Collaborate and Build Something Amazing"
       />
 
-      <section className="form__contactMe">
+      <section className="form__contactMe" id="contact">
         <form onSubmit={onSubmit}>
           <div className="form-row">
             <div className="required">
-              <label htmlFor="nom">Last Name</label>
+              <label htmlFor="lastName">Last Name</label>
               <FontAwesomeIcon icon={faAsterisk} className="icon asterisk" />
             </div>
             <input
@@ -120,7 +121,7 @@ export const Contact = () => {
           </div>
           <div className="form-row">
             <div className="required">
-              <label htmlFor="prenom">First Name</label>
+              <label htmlFor="firstName">First Name</label>
               <FontAwesomeIcon icon={faAsterisk} className="icon asterisk" />
             </div>
             <input
@@ -133,7 +134,7 @@ export const Contact = () => {
             />
           </div>
           <div className="form-row">
-            <label htmlFor="entreprise">Company Name</label>
+            <label htmlFor="company">Company Name</label>
             <input
               type="text"
               id="company"
@@ -179,6 +180,14 @@ export const Contact = () => {
           </div>
         </form>
       </section>
+      <Footer
+        a1={'Home'}
+        href1={'#home'}
+        a2={'Form'}
+        href2={'#contact'}
+        a4={'Projects'}
+        href4={'/'}
+      />
     </main>
   )
 }

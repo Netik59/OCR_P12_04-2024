@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa'
 
-export const Footer = () => {
+export const Footer = ({ a1, a2, a3, a4, href1, href2, href3, href4 }) => {
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -21,7 +21,7 @@ export const Footer = () => {
         <div className="footer-section socials">
           <h2>Follow Me</h2>
           <a
-            href="www.linkedin.com/in/mylan-baize-142027277"
+            href="https://www.linkedin.com/in/mylan-baize-142027277/"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -46,16 +46,16 @@ export const Footer = () => {
           <h2>Quick Links</h2>
           <ul>
             <li>
-              <a href="#home">Home</a>
+              <a href={href1}>{a1}</a>
             </li>
             <li>
-              <a href="#projects">Projects</a>
+              <a href={href2}>{a2}</a>
             </li>
             <li>
-              <a href="#aboutMe">About Me</a>
+              <a href={href3}>{a3}</a>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <a href={href4}>{a4}</a>
             </li>
           </ul>
         </div>

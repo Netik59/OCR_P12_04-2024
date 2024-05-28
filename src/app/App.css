@@ -121,6 +121,14 @@ h2 {
   padding: 10px 30px;
   width: 100%;
 }
+.faIcon {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  font-size: 20px;
+}
+.faIcon:hover {
+  transform: scale(1.2) rotate(360deg);
+}
 
 .nav {
   display: flex;
@@ -388,7 +396,7 @@ h2 {
 }
 
 .footer {
-  color: #fff;
+  color: var(--main-color);
   padding: 50px 0;
   background-color: #000;
   margin-top: 300px;
@@ -411,14 +419,14 @@ h2 {
 }
 
 .footer-section h2 {
-  color: #fff;
+  color: var(--main-color);
   margin-bottom: 20px;
 }
 
 .footer-section p,
 .footer-section span,
 .footer-section a {
-  color: #fff;
+  color: var(--main-color);
   display: block;
   margin-bottom: 10px;
 }
@@ -429,7 +437,7 @@ h2 {
 }
 
 .socials a {
-  color: #fff;
+  color: var(--main-color);
   font-size: 1.5rem;
   margin-right: 10px;
 }
@@ -444,7 +452,7 @@ h2 {
 }
 
 .links a {
-  color: #fff;
+  color: var(--main-color);
   text-decoration: none;
 }
 
@@ -452,7 +460,7 @@ h2 {
   background-color: #222;
   padding: 10px 0;
   text-align: center;
-  color: #fff;
+  color: var(--main-color);
 }
 
 span.redirect {
