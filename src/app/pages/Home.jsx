@@ -30,6 +30,7 @@ export const Home = () => {
             className={project.className}
             effectNumber={project.effectNumber}
             data-aos="fade-up"
+            link={project.link}
           />
         ))}
       </section>

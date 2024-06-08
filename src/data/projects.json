@@ -4,7 +4,8 @@
     "description": "This project consists of creating a responsive web application with React and Redux Toolkit to manage user authentication and transaction management. In Phase 2, I help design Swagger compliant API routes for transaction manipulation, while maintaining an environmentally friendly code and good development practices.",
     "tags": ["React", "Redux Toolkit", "CSS"],
     "imageSrc": "/images/P11/homepage.webp",
-    "effectNumber": "effect1"
+    "effectNumber": "effect1",
+    "link": "https://github.com/Netik59/OCR_P11_03-2024"
   },
   {
     "title": "Event agency",
@@ -12,14 +13,16 @@
     "tags": ["React", "JestJS", "SASS"],
     "imageSrc": "/images/P10/homepage.webp",
     "className": "right-project",
-    "effectNumber": "effect2 right-project"
+    "effectNumber": "effect2 right-project",
+    "link": "https://github.com/Netik59/OCR_P10_02-2024"
   },
   {
     "title": "Photographer’s site",
     "description": "In this SEO optimization project, I start by analyzing the site using an audit with Lighthouse and GTMetrix to identify areas for improvement. Then, I focus on optimizing performance by reducing site load time and working on SEO to improve its visibility on search engines. I also set up local referencing and metadata for social networks, while ensuring the accessibility of the site to all users. Finally, I write a detailed report describing the actions taken and their impact, thus ensuring an overall improvement in the SEO of the site.",
     "tags": ["HTML/CSS", "JavaScript", "Lighthouse"],
     "imageSrc": "/images/P9/homepage.webp",
-    "effectNumber": "effect3"
+    "effectNumber": "effect3",
+    "link": "https://github.com/Netik59/OCR_P9_01-2024"
   },
   {
     "title": "Real estate website",
@@ -27,14 +30,16 @@
     "tags": ["React", "CSS"],
     "imageSrc": "/images/P8/homepage.webp",
     "className": "right-project",
-    "effectNumber": "effect4 right-project"
+    "effectNumber": "effect4 right-project",
+    "link": "https://github.com/Netik59/OCR_P8_12-2023"
   },
   {
     "title": "Plan the development of a website",
     "description": "This project was not to code but to prepare and plan the development of the website. Indeed, I established a technical monitoring system on Feedly, organized according to two axes: the specific aspects of the project and the general trends of web development. This monitoring allowed me to start listing technical tools that could facilitate the development of the site. I also identified the technical challenges of the project by grouping the needs, structuring my ideas and considering technical solutions for each aspect of development. In parallel, I set up a Kanban board on Trello to manage the project tasks, making sure to assign each task, estimate its complexity and detail its technical specifications.",
     "tags": ["Feedly", "Trello", "Daily.dev", "Wakelet"],
     "imageSrc": "/images/P7/homepage.webp",
-    "effectNumber": "effect5"
+    "effectNumber": "effect5",
+    "link": "https://github.com/Netik59/OCR_P7_12-2023"
   },
   {
     "title": "Portfolio of an interior designer",
@@ -42,14 +47,16 @@
     "tags": ["JavaScript", "HTML/CSS"],
     "imageSrc": "/images/P6/homepage.webp",
     "className": "right-project",
-    "effectNumber": "effect6 right-project"
+    "effectNumber": "effect6 right-project",
+    "link": "https://github.com/Netik59/OCR_P6_10-2023"
   },
   {
     "title": "Mobile website with CSS animations",
     "description": "This project aims to develop a 'mobile first' website listing gourmet restaurant menus, allowing customers to compose their meal in advance to reduce wait times. The mission involves integrating the models provided to create a responsive version of the site, focusing first on the mobile and then extending to tablets and desktops. Animations must be carefully implemented with SASS code to add a touch of interactivity. The site must be structured in a clear and well-organized manner, with particular attention paid to the quality of the code.",
     "tags": ["HTML", "SASS", "Mobile First"],
     "imageSrc": "/images/P4/homepage.webp",
-    "effectNumber": "effect7"
+    "effectNumber": "effect7",
+    "link": "https://github.com/Netik59/OCR_P4_10-2023"
   },
   {
     "title": "Static website",
@@ -57,6 +64,7 @@
     "tags": ["HTML/CSS"],
     "imageSrc": "/images/P3/homepage.webp",
     "className": "right-project",
-    "effectNumber": "effect8 right-project"
+    "effectNumber": "effect8 right-project",
+    "link": "https://github.com/Netik59/OCR_P3_10-2023"
   }
 ]

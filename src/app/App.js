@@ -68,6 +68,7 @@ function App() {
   const handleClick = (ev) => { };
 
   const handleNavLinkClick = (ev) => {
+    ev.preventDefault()
     handleCloseMenu();
   };
 

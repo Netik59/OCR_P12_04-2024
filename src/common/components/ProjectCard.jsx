@@ -8,6 +8,7 @@ export const ProjectCard = ({
   tags,
   className,
   effectNumber,
+  link,
 }) => {
   return (
     <>
@@ -36,7 +37,12 @@ export const ProjectCard = ({
           </div>
         </div>
         <div className="project__backdrop"></div>
-        <a className="projet__link" href="#">
+        <a
+          className="projet__link"
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span className="view">View</span>
         </a>
       </div>
