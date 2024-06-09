@@ -1,7 +1,7 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import { Header } from '../common/components/Header';
-import { Home } from './pages/Home'
+import { Home } from './pages/Home';
 import { Contact } from './pages/Contact';
 import './App.css';
 import '../utils/style/scrollbar.css';
@@ -12,11 +12,20 @@ function App() {
   const perspectiveWrapperRef = useRef(null);
   const containerRef = useRef(null);
 
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+      document.body.scrollTop = document.documentElement.scrollTop = 0;
+    } else {
+      document.body.style.overflow = '';
+      document.body.scrollTop = document.documentElement.scrollTop = docScroll;
+    }
+  }, [isMenuOpen, docScroll]);
+
   const handleShowMenu = (ev) => {
     ev.stopPropagation();
     ev.preventDefault();
     setDocScroll(window.scrollY);
-    document.body.scrollTop = document.documentElement.scrollTop = 0;
     perspectiveWrapperRef.current.classList.add('modalview');
     setTimeout(() => {
       perspectiveWrapperRef.current.classList.add('animate');
@@ -26,14 +35,6 @@ function App() {
 
   const handleCloseMenu = (ev) => {
     if (!isMenuOpen) return;
-
-    if (
-      ev.target !== containerRef.current &&
-      !containerRef.current.contains(ev.target) &&
-      ev.target.id !== 'showMenu'
-    )
-      return;
-
 
     const onEndTransFn = (ev) => {
       if (
@@ -49,8 +50,6 @@ function App() {
 
       perspectiveWrapperRef.current.classList.remove('modalview', 'animate');
       containerRef.current.classList.remove('transform');
-
-      document.body.scrollTop = document.documentElement.scrollTop = docScroll;
       setMenuOpen(false);
     };
 
@@ -61,15 +60,12 @@ function App() {
 
     perspectiveWrapperRef.current.classList.remove('animate');
     containerRef.current.classList.add('transform');
-    perspectiveWrapperRef.current.classList.remove('modalview');
-    containerRef.current.classList.remove('modalview');
   };
 
-  const handleClick = (ev) => { };
-
   const handleNavLinkClick = (ev) => {
-    ev.preventDefault()
-    handleCloseMenu();
+    setTimeout(() => {
+      handleCloseMenu(ev);
+    }, 400);
   };
 
   return (
@@ -79,9 +75,9 @@ function App() {
           id="perspective"
           className="perspective effect-rotatetop"
           ref={perspectiveWrapperRef}
-          onClick={handleClick}
+          onClick={handleCloseMenu}
         >
-          <div className="container" ref={containerRef} onClick={handleCloseMenu}>
+          <div className="container" ref={containerRef}>
             <div className="wrapper">
               <Header handleShowMenu={handleShowMenu} />
               <Routes>

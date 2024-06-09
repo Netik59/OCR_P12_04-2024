@@ -1,17 +1,38 @@
+import { useEffect } from 'react'
 import { AboutMe } from '../../common/components/AboutMe'
 import Footer from '../../common/components/Footer'
 import { ProjectCard } from '../../common/components/ProjectCard'
 import { Start } from '../../common/components/Start'
 import projects from '../../data/projects.json'
 import '../../utils/style/index.css'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import { useEffect } from 'react'
+
+const useIntersectionObserver = () => {
+  useEffect(() => {
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible')
+        } else {
+          entry.target.classList.remove('visible')
+        }
+      })
+    }
+
+    const observer = new IntersectionObserver(callback, { threshold: 0.2 }) // Trigger earlier
+
+    const elements = document.querySelectorAll('.fade-up')
+    elements.forEach((element) => observer.observe(element))
+
+    return () => {
+      if (observer) {
+        elements.forEach((element) => observer.unobserve(element))
+      }
+    }
+  }, [])
+}
 
 export const Home = () => {
-  useEffect(() => {
-    AOS.init({ duration: 1000 }) // Initialisez AOS avec la durée d'animation souhaitée
-  }, [])
+  useIntersectionObserver()
 
   return (
     <main>
@@ -27,9 +48,8 @@ export const Home = () => {
             title={project.title}
             description={project.description}
             tags={project.tags}
-            className={project.className}
+            className={`${project.className} fade-up`} // Add fade-up class here
             effectNumber={project.effectNumber}
-            data-aos="fade-up"
             link={project.link}
           />
         ))}
