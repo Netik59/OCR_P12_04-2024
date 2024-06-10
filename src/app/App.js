@@ -1,10 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import { Header } from '../common/components/Header';
 import { Home } from './pages/Home';
 import { Contact } from './pages/Contact';
 import './App.css';
 import '../utils/style/scrollbar.css';
+import Nav from '../common/components/Nav';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -47,9 +48,6 @@ function App() {
         'transitionend',
         onEndTransFn
       );
-
-      perspectiveWrapperRef.current.classList.remove('modalview', 'animate');
-      containerRef.current.classList.remove('transform');
       setMenuOpen(false);
     };
 
@@ -86,23 +84,7 @@ function App() {
               </Routes>
             </div>
           </div>
-          <nav className="outer-nav bottom horizontal">
-            <Link to="/" className="icon-home" onClick={handleNavLinkClick}>
-              Home
-            </Link>
-            <a href="#home" className="icon-project" onClick={handleNavLinkClick}>
-              Start
-            </a>
-            <a href="#projects" className="icon-project" onClick={handleNavLinkClick}>
-              Projects
-            </a>
-            <a href="#aboutMe" className="icon-aboutMe" onClick={handleNavLinkClick}>
-              About Me
-            </a>
-            <Link to="/contact" className="icon-contactMe" onClick={handleNavLinkClick}>
-              Contact me
-            </Link>
-          </nav>
+          <Nav handleNavLinkClick={handleNavLinkClick} />
         </div>
       </Router>
     </React.StrictMode>
