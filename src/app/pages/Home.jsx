@@ -18,7 +18,7 @@ const useIntersectionObserver = () => {
       })
     }
 
-    const observer = new IntersectionObserver(callback, { threshold: 0.2 }) // Trigger earlier
+    const observer = new IntersectionObserver(callback, { threshold: 0.2 })
 
     const elements = document.querySelectorAll('.fade-up')
     elements.forEach((element) => observer.observe(element))
@@ -48,7 +48,7 @@ export const Home = () => {
             title={project.title}
             description={project.description}
             tags={project.tags}
-            className={`${project.className} fade-up`} // Add fade-up class here
+            className={`${project.className} fade-up`}
             effectNumber={project.effectNumber}
             link={project.link}
           />

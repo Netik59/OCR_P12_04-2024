@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import slides from '../../data/slides.json'
 
 export const AboutMe = () => {
@@ -27,15 +27,29 @@ export const AboutMe = () => {
     }, 0)
   }
 
+  const handleBulletClick = (index) => {
+    const direction = index > currentSlide ? 'next' : 'prev'
+    setAnimationClass(`${direction} entering`)
+    setTimeout(() => {
+      setCurrentSlide(index)
+      setAnimationClass(direction)
+      setTimeout(() => {
+        setAnimationClass('')
+      }, 500)
+    }, 0)
+  }
+
   useEffect(() => {
     const handleMouseMove = (e) => {
-      const slider = document.querySelector('.aboutMe__slider')
-      const { clientX, clientY } = e
-      const { innerWidth, innerHeight } = window
-      const xOffset = (clientX / innerWidth - 0.5) * 20
-      const yOffset = (clientY / innerHeight - 0.5) * 20
+      if (window.innerWidth > 768) {
+        const slider = document.querySelector('.aboutMe__slider')
+        const { clientX, clientY } = e
+        const { innerWidth, innerHeight } = window
+        const xOffset = (clientX / innerWidth - 0.5) * 20
+        const yOffset = (clientY / innerHeight - 0.5) * 20
 
-      slider.style.transform = `perspective(1000px) rotateY(${xOffset}deg) rotateX(${yOffset}deg)`
+        slider.style.transform = `perspective(1000px) rotateY(${xOffset}deg) rotateX(${yOffset}deg)`
+      }
     }
 
     document.addEventListener('mousemove', handleMouseMove)
@@ -67,7 +81,7 @@ export const AboutMe = () => {
               <li
                 key={index}
                 className={index === currentSlide ? 'active' : ''}
-                onClick={() => setCurrentSlide(index)}
+                onClick={() => handleBulletClick(index)}
               ></li>
             ))}
           </ul>

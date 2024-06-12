@@ -1,6 +1,6 @@
 import { Link, useLocation } from 'react-router-dom'
 
-const Nav = ({ handleNavLinkClick }) => {
+export const Nav = ({ handleNavLinkClick }) => {
   const location = useLocation()
 
   if (location.pathname === '/') {
@@ -50,5 +50,3 @@ const Nav = ({ handleNavLinkClick }) => {
 
   return null
 }
-
-export default Nav

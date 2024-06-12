@@ -1,11 +1,11 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Header } from '../common/components/Header';
 import { Home } from './pages/Home';
 import { Contact } from './pages/Contact';
+import { Nav } from '../common/components/Nav';
 import './App.css';
 import '../utils/style/scrollbar.css';
-import Nav from '../common/components/Nav';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
