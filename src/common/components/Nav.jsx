@@ -41,7 +41,11 @@ export const Nav = ({ handleNavLinkClick }) => {
         <a href="#home" className="icon-project" onClick={handleNavLinkClick}>
           Start
         </a>
-        <a href="#form" className="icon-project" onClick={handleNavLinkClick}>
+        <a
+          href="#contact"
+          className="icon-project"
+          onClick={handleNavLinkClick}
+        >
           Form
         </a>
       </nav>
