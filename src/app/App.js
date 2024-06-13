@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react';
+import React, { useRef, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Header } from '../common/components/Header';
 import { Home } from './pages/Home';
@@ -9,24 +9,12 @@ import '../utils/style/scrollbar.css';
 
 function App() {
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [docScroll, setDocScroll] = useState(0);
   const perspectiveWrapperRef = useRef(null);
   const containerRef = useRef(null);
-
-  useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = 'hidden';
-      document.body.scrollTop = document.documentElement.scrollTop = 0;
-    } else {
-      document.body.style.overflow = '';
-      document.body.scrollTop = document.documentElement.scrollTop = docScroll;
-    }
-  }, [isMenuOpen, docScroll]);
 
   const handleShowMenu = (ev) => {
     ev.stopPropagation();
     ev.preventDefault();
-    setDocScroll(window.scrollY);
     perspectiveWrapperRef.current.classList.add('modalview');
     setTimeout(() => {
       perspectiveWrapperRef.current.classList.add('animate');

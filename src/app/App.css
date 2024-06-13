@@ -38,10 +38,6 @@ h6 {
   font-weight: normal;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 ul {
   list-style: none;
 }
@@ -84,6 +80,7 @@ th {
 
 * {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 a {
