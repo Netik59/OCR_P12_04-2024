@@ -4,6 +4,7 @@ import { Header } from '../common/components/Header';
 import { Home } from './pages/Home';
 import { Contact } from './pages/Contact';
 import { Nav } from '../common/components/Nav';
+import { Error } from '../common/components/Error';
 import './App.css';
 import '../utils/style/scrollbar.css';
 
@@ -69,6 +70,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/contact" element={<Contact />} />
+                <Route path="*" element={<Error />} />
               </Routes>
             </div>
           </div>

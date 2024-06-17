@@ -50,7 +50,20 @@ export const Nav = ({ handleNavLinkClick }) => {
         </a>
       </nav>
     )
+  } else {
+    return (
+      <nav className="outer-nav bottom horizontal">
+        <Link to="/" className="icon-home" onClick={handleNavLinkClick}>
+          Home
+        </Link>
+        <Link
+          to="/contact"
+          className="icon-contactMe"
+          onClick={handleNavLinkClick}
+        >
+          Contact me
+        </Link>
+      </nav>
+    )
   }
-
-  return null
 }
