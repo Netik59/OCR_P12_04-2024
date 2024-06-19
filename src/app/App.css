@@ -375,19 +375,6 @@ h2 {
   backface-visibility: hidden;
 }
 
-.icon-home::before {
-  content: '\e600';
-}
-.icon-project::before {
-  content: '\e601';
-}
-.icon-aboutMe::before {
-  content: '\e602';
-}
-.icon-contactMe::before {
-  content: '\e603';
-}
-
 /* Effect Rotate Top */
 .effect-rotatetop {
   background: black;
